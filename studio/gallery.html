@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+</div>
+
+<h1 class="gallery-title">Our Gallery</h1>
+
+<div class="gallery-grid">
+
+    <img src="gallery1.jpg" onclick="openLightbox(0)">
+    <img src="gallery2.jpg" onclick="openLightbox(1)">
+    <img src="gallery3.jpg" onclick="openLightbox(2)">
+    <img src="gallery4.jpg" onclick="openLightbox(3)">
+    <img src="gallery5.jpg" onclick="openLightbox(4)">
+    <img src="gallery6.jpg" onclick="openLightbox(5)">
+    <img src="gallery7.jpg" onclick="openLightbox(6)">
+    <img src="gallery8.jpg" onclick="openLightbox(7)">
+    <img src="gallery9.jpg" onclick="openLightbox(8)">
+    <img src="gallery10.jpg"onclick="openLightbox(9)">
+    <img src="gallery11.jpg" onclick="openLightbox(10)">
+    <img src="gallery12.jpg" onclick="openLightbox(11)">
+    <img src="gallery13.jpg" onclick="openLightbox(12)">
+    <img src="gallery14.jpg" onclick="openLightbox(13)">
+    <img src="gallery15.jpg" onclick="openLightbox(14)">
+    <img src="gallery16.jpg" onclick="openLightbox(15)">
+    <img src="gallery17.jpg" onclick="openLightbox(16)">
+    <img src="gallery18.jpg" onclick="openLightbox(17)">
+    <img src="gallery19.jpg" onclick="openLightbox(18)">
+    <img src="gallery20.jpg" onclick="openLightbox(19)">
+    <img src="gallery21.jpg" onclick="openLightbox(20)">
+    <img src="gallery22.jpg" onclick="openLightbox(21)">
+    <img src="gallery23.jpg" onclick="openLightbox(22)">
+    <img src="gallery24.jpg" onclick="openLightbox(23)">
+    <img src="gallery25.jpg" onclick="openLightbox(24)">
+    <img src="gallery26.jpg" onclick="openLightbox(25)">
+    <img src="gallery27.jpg" onclick="openLightbox(26)">
+    <img src="gallery28.jpg" onclick="openLightbox(27)">
+    <img src="gallery29.jpg" onclick="openLightbox(28)">
+    <img src="gallery30.jpg" onclick="openLightbox(29)">
+    <img src="gallery31.jpg" onclick="openLightbox(30)">
+    <img src="gallery32.jpg" onclick="openLightbox(31)">
+    <img src="gallery33.jpg" onclick="openLightbox(32)">
+    <img src="gallery34.jpg" onclick="openLightbox(33)">
+    <img src="gallery35.jpg" onclick="openLightbox(34)">
+    <img src="gallery36.jpg" onclick="openLightbox(35)">
+    <img src="gallery37.jpg" onclick="openLightbox(36)">
+    <img src="gallery38.jpg" onclick="openLightbox(37)">
+    <img src="gallery39.jpg" onclick="openLightbox(38)">
+    <img src="gallery40.jpg" onclick="openLightbox(39)">
+    <img src="gallery41.jpg" onclick="openLightbox(40)">
+    <img src="gallery42.jpg" onclick="openLightbox(41)">
+    <img src="gallery43.jpg" onclick="openLightbox(42)">
+    <img src="gallery44.jpg" onclick="openLightbox(43)">
+    <img src="gallery45.jpg" onclick="openLightbox(44)">
+    <img src="gallery46.jpg" onclick="openLightbox(45)">
+    <img src="gallery47.jpg" onclick="openLightbox(46)">
+    <img src="gallery48.jpg" onclick="openLightbox(47)">
+    <img src="gallery49.jpg" onclick="openLightbox(48)">
+    <img src="gallery50.jpg" onclick="openLightbox(49)">
+    <img src="gallery51.jpg" onclick="openLightbox(50)">
+    <img src="gallery52.jpg" onclick="openLightbox(51)">
+    <img src="gallery53.jpg" onclick="openLightbox(52)">
+    <img src="gallery54.jpg" onclick="openLightbox(53)">
+    <img src="gallery55.jpg" onclick="openLightbox(54)">
+    <img src="gallery56.jpg" onclick="openLightbox(55)">
+    <img src="gallery57.jpg" onclick="openLightbox(56)">
+    <img src="gallery58.jpg" onclick="openLightbox(57)">
+    <img src="gallery59.jpg" onclick="openLightbox(60)">
+    <img src="gallery60.jpg" onclick="openLightbox(61)">
+    <img src="gallery61.jpg" onclick="openLightbox(62)">
+   
+</div>
+
+<div id="lightbox" class="lightbox">
+
+    <span class="close" onclick="closeLightbox()">&times;</span>
+
+    <span class="prev" onclick="changeSlide(-1)">❮</span>
+
+    <img id="lightbox-img">
+
+    <span class="next" onclick="changeSlide(1)">❯</span>
+
+</div>
+
+<script>
+
+const images = [
+    "gallery1.jpg",
+    "gallery2.jpg",
+    "gallery3.jpg",
+    "gallery4.jpg",
+    "gallery5.jpg",
+    "gallery6.jpg",
+    "gallery7.jpg",
+    "gallery8.jpg",
+    "gallery9.jpg",
+    "gallery10.jpg",
+    "gallery11.jpg",
+    "gallery12.jpg",
+    "gallery13.jpg",
+    "gallery14.jpg",
+    "gallery15.jpg",
+    "gallery16.jpg",
+    "gallery17.jpg",
+    "gallery18.jpg",
+    "gallery19.jpg",
+    "gallery20.jpg",
+    "gallery21.jpg",
+    "gallery22.jpg",
+    "gallery23.jpg",
+    "gallery24.jpg",
+    "gallery25.jpg",
+    "gallery26.jpg",
+    "gallery27.jpg",
+    "gallery28.jpg",
+    "gallery29.jpg",
+    "gallery30.jpg",
+    "gallery31.jpg",
+    "gallery32.jpg",
+    "gallery33.jpg",
+    "gallery34.jpg",
+    "gallery35.jpg",
+    "gallery36.jpg",
+    "gallery37.jpg",
+    "gallery38.jpg",
+    "gallery39.jpg",
+    "gallery40.jpg",
+    "gallery41.jpg",
+    "gallery42.jpg",
+    "gallery43.jpg",
+    "gallery44.jpg",
+    "gallery45.jpg",
+    "gallery46.jpg",
+    "gallery47.jpg",
+    "gallery48.jpg",
+    "gallery49.jpg",
+    "gallery50.jpg",
+    "gallery51.jpg",
+    "gallery52.jpg",
+    "gallery53.jpg",
+    "gallery54.jpg",
+    "gallery55.jpg",
+    "gallery56.jpg",
+    "gallery57.jpg",
+    "gallery58.jpg",
+    "gallery59.jpg",
+    "gallery60.jpg",
+    "gallery61.jpg"
+];
+
+let currentIndex = 0;
+
+function openLightbox(index){
+    currentIndex = index;
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = images[index];
+}
+
+function closeLightbox(){
+    document.getElementById("lightbox").style.display = "none";
+}
+
+function changeSlide(step){
+
+    currentIndex += step;
+
+    if(currentIndex < 0){
+        currentIndex = images.length - 1;
+    }
+
+    if(currentIndex >= images.length){
+        currentIndex = 0;
+    }
+
+    document.getElementById("lightbox-img").src =
+    images[currentIndex];
+}
+
+</script>
+</body>
+</html>
